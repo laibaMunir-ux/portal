@@ -15,6 +15,6 @@ battery temperature exceeds the critical threshold or battery capacity falls bel
 * **NFR-02 (Performance / Response Time):**  The system shall require authenticated and role-authorized
 operators before accepting rover commands.
 * **NFR-03 (Scalability):** The system shall support communication with multiple rovers simultaneously.
-* **NFR-04 (Security):** The system shall support at least 20 simultaneously
+* **NFR-04 (Security):**  The system shall support at least 20 simultaneously
 connected rovers.
   
