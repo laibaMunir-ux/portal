@@ -15,3 +15,16 @@
 * **NFR-03 (Scalability):** The system shall support communication with multiple rovers simultaneously.
 * **NFR-04 (Security):** Only authenticated Mission Control operators shall be allowed to issue commands.
   
+## Mission 2: Change Requests (CRs) Analysis
+
+### Change Request CR-01 Analysis
+* **Impact:** Tightens the original safety requirement by making it precise and measurable. It specifies explicit triggers (battery temperature threshold and emergency capacity level) and adds a strict maximum reaction time window (**within 3 seconds**).
+* **System Effect:** Requires continuous monitoring of sensors and an automated interrupt mechanism to guarantee execution within the 3-second constraint.
+
+### Change Request CR-02 Analysis
+* **Impact:** Replaces a vague scalability goal ("multiple rovers") with a concrete metric (**at least 20 simultaneously connected rovers**).
+* **System Effect:** Requires Mission Control infrastructure to manage multi-threading, concurrency, and adequate bandwidth allocation for up to 20 concurrent telemetry and command links.
+
+### Change Request CR-03 Analysis
+* **Impact:** Upgrades the security model from basic **Authentication** (verifying *who* the operator is) to **Role-Based Access Control / Authorization** (verifying *what* permissions that specific operator role has).
+* **System Effect:** The system must now maintain operator roles (e.g., Driver, Engineer, Administrator) and evaluate access control lists (ACLs) before executing any command.
